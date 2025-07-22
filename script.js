@@ -834,10 +834,9 @@ function preloadGalaxyAudio() {
 }
 
 function playGalaxyAudio() {
-  const audio = document.getElementById('bg-music');
-  if (audio) {
-    audio.play().catch(err => {
-      console.warn("Audio play blocked by browser:", err);
+  if (galaxyAudio) {
+    galaxyAudio.play().catch(err => {
+      console.warn("Audio play blocked or delayed:", err);
     });
   }
 }
